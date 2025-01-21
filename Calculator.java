@@ -19,4 +19,16 @@ public class Calculator {
     public double divide(double a, double b) {
         return b != 0 ? a / b : 0; // Return 0 if division by zero
     }
+	
+	public void fibonacci(int a){
+        int first = 0; 
+		int second = 1;		        
+        for (int i = 1; i <= a; i++) { 
+            System.out.print(first + " ");
+            
+            int nextTerm = first + second;
+            first = second;
+            second = nextTerm;
+		}
+	}
 }
