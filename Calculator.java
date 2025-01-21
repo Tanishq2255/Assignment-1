@@ -31,4 +31,36 @@ public class Calculator {
             second = nextTerm;
 		}
 	}
+	
+	void sumOfArray(int size){	
+		Input input = new Input(); 
+
+		int[] arrays;
+		arrays = input.arrayInput(size);
+		int total = 0 ;
+		
+		for (int i = 0; i < size; i++){ 
+			total += arrays[i];
+		}
+		
+		System.out.println("The Sum of Elements of Array's is: " + total);	
+		
+	}	
+	
+	void avgOfArray(int size){
+		Input input = new Input(); 
+
+		int[] arrays;
+		arrays = input.arrayInput(size);
+		int total = 0 ;
+		
+		for (int i = 0; i < size; i++){ 
+			total += arrays[i];
+		}
+		double average;
+		average = (double) total/size;
+	
+		System.out.println("The Average of Elements in Array is: " + average );
+	}
+		
 }

@@ -35,4 +35,14 @@ public class Input {
     public void close() {
         scanner.close();
     }
+		
+	int[] arrayInput(int size){ 
+		Scanner scan = new Scanner(System.in); 
+		System.out.print("\nEnter the numbers: "); 
+		int[] array = new int[size];
+		for (int i = 0; i < size; i++){ 
+			array[i] = scan.nextInt();
+		}	
+        return array; 	
+	}
 }

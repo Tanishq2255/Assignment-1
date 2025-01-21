@@ -6,7 +6,7 @@ public class Main {
         Calculator calculator = new Calculator();
         Input input = new Input();
         
-		System.out.println("What do you want to do? \n 1)Calculator 2)fibonnaci");
+		System.out.println("What do you want to do? \n 1)Calculator \n2)fibonnaci \n3)Arrays");
 		Scanner scan = new Scanner(System.in);
 		int option = scan.nextInt();
 		
@@ -47,8 +47,26 @@ public class Main {
 			int terms = scann.nextInt();
 			calculator.fibonacci(terms);
 		} 
-		else {
-			System.out.println("Yet to make code");
+		else if (option == 3){
+			System.out.println("Please enter the number of elements of Array");
+			Scanner scannn = new Scanner(System.in);
+			int size = scannn.nextInt();
+			
+			System.out.println("Do you want to \n1)Add all elements in Array \n2)Average of all elements in Array");
+			int choice = scan.nextInt();
+			if ( choice == 1){
+				calculator.sumOfArray(size);
+			}
+			else if (choice == 2){
+				calculator.avgOfArray(size);
+			}
+			else{
+				System.out.println("Enter valid input");
+			}	
+		}
+		
+		else{
+			System.out.println("Enter valid input");
 		}
     }
 }
